@@ -63,8 +63,8 @@ class StyleTransfer:
                 P = self.Ps[id]            # content feature of p
 
                 _, h, w, d = F.get_shape() # first return value is batch size (must be one)
-                N = h.value*w.value        # product of width and height
-                M = d.value                # number of filters
+                M = h.value*w.value        # product of width and height
+                N = d.value                # number of filters
 
                 w = self.CONTENT_LAYERS[id]# weight for this layer
 
@@ -82,8 +82,8 @@ class StyleTransfer:
                 F = self.Fs[id]
 
                 _, h, w, d = F.get_shape()  # first return value is batch size (must be one)
-                N = h.value * w.value       # product of width and height
-                M = d.value                 # number of filters
+                M = h.value * w.value       # product of width and height
+                N = d.value                 # number of filters
 
                 w = self.STYLE_LAYERS[id]   # weight for this layer
 
